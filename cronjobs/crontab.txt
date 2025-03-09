@@ -1,0 +1,2 @@
+# Runs the integrity check every day at 2 AM and logs the output
+0 2 * * * /usr/bin/python3 /home/amir/Documents/Repos/comp8003-assignment06-eskandari/src/main.py --check >> /home/amir/Documents/Repos/comp8003-assignment06-eskandari/logs/cron.log 2>&1
