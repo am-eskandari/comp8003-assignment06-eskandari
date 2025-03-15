@@ -4,14 +4,14 @@ import hashlib
 import os
 import sys
 
-REPO_DIR = "/home/amir/Documents/Repos/comp8003-assignment06-eskandari"
-LOG_DIR = os.path.join(REPO_DIR, "logs")
+# Define relative paths
+REPO_DIR = os.path.abspath(os.path.dirname(__file__) + "/..")  # Get project root
+LOG_DIR = os.path.join(REPO_DIR, "logs")  # Correct relative path
 
-os.makedirs(LOG_DIR, exist_ok=True)
 
 BASELINE_FILE = os.path.join(LOG_DIR, "etc_hashes.txt")
-REPORT_FILE = os.path.join(LOG_DIR, "integrity_report.log")
-INTEGRITY_LOG = os.path.join(LOG_DIR, "integrity_monitor.log")
+REPORT_FILE = os.path.join(LOG_DIR, "integrity_monitor.log")  # Use relative path
+INTEGRITY_LOG = os.path.join(LOG_DIR, "integrity_monitor.log")  # Ensure consistency
 
 
 def log_event(level, message):
